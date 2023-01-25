@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-
+import {NgxPaginationModule} from 'ngx-pagination'; // <-- import the module
 import { CountriesComponent } from './app.component';
 
 @NgModule({
@@ -11,7 +11,10 @@ import { CountriesComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxPaginationModule,
+    
+   
   ],
   providers: [],
   bootstrap: [CountriesComponent]

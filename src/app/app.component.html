@@ -1,10 +1,13 @@
+<div >
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>
+
 <ul class="list">
-  <li class="list-item" *ngFor="let country of countries.slice((currentPage-1)*itemsPerPage, currentPage*itemsPerPage)">
+  <li class="list-item" *ngFor="let country of countries | paginate: { itemsPerPage: itemsPerPage, currentPage: p } ">
     <p>Name: {{ country.name }}</p> <br>
     <p>Region: {{ country.region }}</p> <br>
     <p>Area: {{ country.area }}</p>
   </li>
 </ul>
-<div class="pagination">
-  <a *ngFor="let page of pages" (click)="currentPage = page">{{ page }}</a>
-</div>
+
+*/ class="d-flex justify-content-sm-center */
