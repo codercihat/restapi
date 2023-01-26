@@ -12,7 +12,7 @@ export class CountriesComponent implements OnInit {
   constructor(private http: HttpClient) { }
   countries: any;
   p:number = 1;
-  itemsPerPage:number = 10; 
+  itemsPerPage:number = 5; 
   TotalProduct:any ;
   ngOnInit(): void {
     this.http.get('https://restcountries.com/v2/all?fields=name,region,area').subscribe(data => {

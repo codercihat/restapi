@@ -1,12 +1,13 @@
+<div class="divv">
 <mat-button-toggle-group (change)="sortData($event.value)" [(ngModel)]="sortOption" class="sort-options-container">
   <mat-button-toggle value="asc">A-Z</mat-button-toggle>
   <mat-button-toggle value="desc">Z-A</mat-button-toggle>
 </mat-button-toggle-group>
-
+</div>
 <ul class="list">
   <li class="list-item" *ngFor="let country of countries | paginate: { itemsPerPage: itemsPerPage, currentPage: p } ">
-    <p>Name: {{ country.name }}</p> <br>
-    <p>Region: {{ country.region }}</p> <br>
+    <p>Name: {{ country.name }}</p> 
+    <p>Region: {{ country.region }}</p> 
     <p>Area: {{ country.area }}</p>
   </li>
 </ul>
