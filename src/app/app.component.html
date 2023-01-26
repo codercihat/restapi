@@ -1,6 +1,7 @@
-<div >
-  <pagination-controls (pageChange)="p = $event"></pagination-controls>
-</div>
+<mat-button-toggle-group (change)="sortData($event.value)" [(ngModel)]="sortOption" class="sort-options-container">
+  <mat-button-toggle value="asc">A-Z</mat-button-toggle>
+  <mat-button-toggle value="desc">Z-A</mat-button-toggle>
+</mat-button-toggle-group>
 
 <ul class="list">
   <li class="list-item" *ngFor="let country of countries | paginate: { itemsPerPage: itemsPerPage, currentPage: p } ">
@@ -10,4 +11,6 @@
   </li>
 </ul>
 
-*/ class="d-flex justify-content-sm-center */
+<div >
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>

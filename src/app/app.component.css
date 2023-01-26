@@ -45,5 +45,20 @@ table {
   th {
     color: rgb(29, 26, 26);
   }
- 
+  .sort-options-container {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    background: #f8f8f8;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bolder;
+  }
+  
+  .sort-option {
+    flex-grow: 1;
+    text-align: left;
+    background: rgb(212, 18, 18);
+  }
  

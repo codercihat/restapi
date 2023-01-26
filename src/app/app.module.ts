@@ -3,7 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import {NgxPaginationModule} from 'ngx-pagination'; // <-- import the module
 import { CountriesComponent } from './app.component';
-
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     CountriesComponent
@@ -13,6 +14,9 @@ import { CountriesComponent } from './app.component';
     BrowserModule,
     HttpClientModule,
     NgxPaginationModule,
+    MatButtonToggleModule,
+    FormsModule,
+    ReactiveFormsModule
     
    
   ],
