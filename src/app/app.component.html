@@ -1,6 +1,8 @@
 <div class="divv">
-<mat-button-toggle-group (change)="sortData($event.value)" [(ngModel)]="sortOption" class="sort-options-container">
-  <mat-button-toggle value="asc">A-Z</mat-button-toggle>
+  
+<mat-button-toggle-group (change)="sortData($event.value)" [(ngModel)]="sortOption" class="sort-options-container" >
+  
+  <mat-button-toggle value="asc">A-Z</mat-button-toggle> <p>or</p>
   <mat-button-toggle value="desc">Z-A</mat-button-toggle>
 </mat-button-toggle-group>
 </div>
