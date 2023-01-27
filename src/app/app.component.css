@@ -72,11 +72,18 @@ table {
     background: rgb(212, 18, 18);
   }
  .divv{
-display: flex;
+display: inline-block;
 width: 200;
 margin-bottom: 16px;
  }
  .db{
   display: inline-block;
  }
- 
+ .selected-option {
+  background-color: blue;
+}
+.right-top-corner {
+  position: absolute;
+  top: 0;
+  right: 0;
+}

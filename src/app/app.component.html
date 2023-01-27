@@ -1,11 +1,13 @@
-<form (submit)="onSubmit()">
+<div class="divv">
   <mat-button-toggle-group (change)="sortData($event.value)" [(ngModel)]="sortOption" class="sort-options-container" >
-    <mat-button-toggle value="asc">A-Z</mat-button-toggle>
-    <mat-button-toggle value="desc">Z-A</mat-button-toggle>
+    <mat-button-toggle value="asc" (click)="changeBackgroundColor('asc')" [ngClass]="{'selected-option': sortOption === 'asc'}">A-Z</mat-button-toggle>
+    <mat-button-toggle value="desc" (click)="changeBackgroundColor('desc')" [ngClass]="{'selected-option': sortOption === 'desc'}">Z-A</mat-button-toggle>
   </mat-button-toggle-group>
-  <button type="submit">Submit</button>
-</form>
-
+</div>
+<div class="right-top-corner">
+<button (click)="toggleFilter()">{{isFiltering ? 'Cancel Filter' : 'Filter countries smaller than Lithuania'}}</button> 
+<button (click)="toggleFilterByRegion()">{{isFilteringByRegion ? 'Cancel Region Filter' : 'Filter countries in Ocenia Region'}}</button>
+</div>
 <ul class="list">
   <li class="list-item" *ngFor="let country of countries | paginate: { itemsPerPage: itemsPerPage, currentPage: p } ">
     <p>Name: {{ country.name }}</p> 
